@@ -23,3 +23,44 @@ body {
   --color5: #fff;
 }
 /* Colors END */
+
+/*! Navbar */
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10rem;
+	position: absolute;
+	width: 100%;
+	z-index: 3;
+  }
+  .logo {
+	width: 6rem;
+	transition: all 0.5s ease;
+  }
+  .logo:hover {
+	transform: scale(1.2);
+  }
+  /*? Links */
+  .links {
+	display: flex;
+	column-gap: 1.2rem;
+	list-style-type: none;
+	align-items: center;
+	padding-left: 0;
+  }
+  
+  .links-items a {
+	text-decoration: none;
+	color: var(--color5);
+	font-size: 1.7rem;
+  }
+  .links-items a:hover {
+	color: var(--color2);
+  }
+  .active {
+	border-bottom: 2px solid var(--color5);
+  }
+  /*? Links END */
+  
+  /*! Navbar END */
