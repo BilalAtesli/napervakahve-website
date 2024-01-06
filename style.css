@@ -240,3 +240,39 @@ nav {
 	backdrop-filter: blur(0.8rem);
   }
   /* ! Contact END */
+
+  /*! Footer */
+footer {
+	background-color: var(--color1);
+	height: 12.5rem;
+	font-size: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 1.5rem;
+  }
+  .icon {
+	display: flex;
+	list-style: none;
+	column-gap: 1rem;
+	align-items: center;
+  }
+  .icon-items {
+	cursor: pointer;
+  }
+  .icon-items:hover {
+	cursor: pointer;
+	color: var(--color2);
+  }
+  
+  .arrow {
+	cursor: pointer;
+	background-color: var(--color1);
+	padding: 0.3rem 0.5rem;
+	transition: all 0.3s ease;
+	border-radius: 0.5rem;
+  }
+  .arrow:hover {
+	background-color: var(--color2);
+  }
+  /*! Footer END */
