@@ -94,3 +94,43 @@ nav {
   }
   
   /*! Video END */
+
+  /*!Cards */
+.cards {
+	background-color: var(--color3);
+	margin: 3rem 10%;
+	border-radius: 1rem;
+	overflow: hidden;
+	-webkit-box-shadow: 0px 5px 5px 7px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 5px 5px 7px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 5px 5px 7px rgba(0, 0, 0, 0.75);
+	position: relative;
+	top: -7rem;
+	z-index: 1;
+  }
+  .cards-item {
+	display: flex;
+  }
+  .card-content {
+	width: 100%;
+	flex-wrap: wrap;
+  }
+  .card-content p {
+	font-family: "Roboto";
+	padding: 2rem;
+	letter-spacing: 1px;
+  }
+  
+  .card-image {
+	background-image: url(coffee-beans.jpg);
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+  }
+  .card-image2 {
+	background-image: url(farmer.jpg);
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+  }
+  /*!Cards  END*/
