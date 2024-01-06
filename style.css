@@ -64,3 +64,33 @@ nav {
   /*? Links END */
   
   /*! Navbar END */
+
+  /*! Video  */
+
+.video {
+	position: relative;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	object-fit: cover;
+	width: 100%;
+	height: 100vh;
+  }
+  
+  .video-content {
+	position: absolute;
+	width: 50%;
+  }
+  
+  .video-header {
+	letter-spacing: 0.7rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 6.75rem;
+  }
+  .video-article {
+	font-size: 2rem;
+  }
+  
+  /*! Video END */
