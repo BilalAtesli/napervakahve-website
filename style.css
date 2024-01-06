@@ -276,3 +276,99 @@ footer {
 	background-color: var(--color2);
   }
   /*! Footer END */
+
+  /*? Responsive   */
+
+@media screen and (max-width: 1050px) {
+	.video-header {
+	  font-size: 6rem;
+	}
+	.video-article {
+	  font-size: 1.5rem;
+	}
+  }
+  @media screen and (max-width: 950px) {
+	.video-header {
+	  font-size: 5rem;
+	}
+	.video-article {
+	  font-size: 1.5rem;
+	}
+  
+	.cards-item {
+	  display: flex;
+	  flex-direction: column;
+	}
+	.card-image {
+	  height: 30rem;
+	}
+	.card-image2 {
+	  height: 30rem;
+	}
+  }
+  @media screen and (max-width: 815px) {
+	body {
+	  font-size: 1.2rem;
+	}
+	.video-header {
+	  font-size: 4rem;
+	}
+  
+	.card-content h2,
+	p {
+	  display: inline-block;
+	  margin: 0;
+	}
+	.products-grid {
+	  display: grid;
+	  grid-template-columns: repeat(1, 1fr);
+	  row-gap: 2rem;
+	}
+  }
+  @media screen and (max-width: 675px) {
+	.video-header {
+	  font-size: 3rem;
+	}
+	nav {
+	  height: 10rem;
+	}
+	.links-items a {
+	  font-size: 1.5rem;
+	  margin-left: 0px;
+	}
+	.card-content h2,
+	p {
+	  display: inline-block;
+	  margin: 0;
+	  letter-spacing: 0px;
+	}
+	.card-content p {
+	  padding: 1rem;
+	}
+  }
+  @media screen and (max-width: 550px) {
+	.video-header {
+	  font-size: 2rem;
+	}
+	.video-article {
+	  font-size: 1.1rem;
+	}
+  }
+  @media screen and (max-width: 460px) {
+	.logo {
+	  width: 3.7rem;
+	}
+	.links-items a {
+	  font-size: 1.3rem;
+	}
+  }
+  @media screen and (max-width: 410px) {
+	.video-content {
+	  width: 100%;
+	}
+	nav {
+	  height: 6rem;
+	}
+  }
+  
+  /*? Responsive END  */
