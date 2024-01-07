@@ -277,6 +277,15 @@ footer {
   }
   /*! Footer END */
 
+  /* other pages */
+  .about-cards {
+	background-color: var(--color1);
+	border-radius: 0;
+	box-shadow: none;
+	position: static;
+  }
+  /* other pages end*/
+
   /*? Responsive   */
 
 @media screen and (max-width: 1050px) {
