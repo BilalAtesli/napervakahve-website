@@ -284,6 +284,28 @@ footer {
 	box-shadow: none;
 	position: static;
   }
+  .customer {
+	position: static;
+	color: var(--color1);
+  }
+  .customer-grid-items {
+	background-color: var(--color4);
+	box-shadow: none;
+	transition: all 0.3s ease;
+  }
+  .customer-grid-items:hover {
+	transform: translateY(-1rem);
+  }
+  .avatar {
+	margin-bottom: 2rem;
+  }
+  .avatar img {
+	width: 5rem;
+	border-radius: 50%;
+  }
+  .avatar h3 {
+	margin: 0.2rem 0rem;
+  }
   /* other pages end*/
 
   /*? Responsive   */
