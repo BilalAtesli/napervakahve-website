@@ -11,6 +11,6 @@ buttonElement.addEventListener("click", (event) => {
     window.location.href = "index.html";
   } else {
     warningElement.classList.add("warning");
-    warningElement.innerHTML = "<p>Şifre veya Kullanıcı adı yanlış !</p>";
+    warningElement.innerHTML = "<p id='warning'>Şifre veya Kullanıcı adı yanlış !</p>";
   }
 });

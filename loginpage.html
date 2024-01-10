@@ -1,95 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kullanıcı Girişi</title>
-	<link rel="stylesheet" href="style.css" />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Gotham";
-        font-size: 1.6rem;
-        background-color: var(--color1);
-        color: var(--color1);
-        overflow: hidden;
-      }
-	  .form-logo {
-	justify-content: center;
-	align-items: center;
-	display: flex;
-  }
-  .logo {
-	width: 10rem;
-	align-items: center;
-	margin: 0.5rem 0;
-  }
-      .logo:hover {
-        transform: none;
-      }
+	<style>
+		@font-face {
+			font-family: "Gotham";
+			src: url("GothamRoundedLight_21020.ttf") format("woff2"),
+				url("GothamRoundedMedium_21022.ttf") format("woff"),
+				url("GothamRoundedBold_21016.ttf") format("woff");
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		/* Colors */
+		:root {
+			--color1: #2b2928;
+			/*gri-siyah*/
+			--color2: #d4be87;
+			/*vanilya-sarısı*/
+			--color3: #424d21;
+			/*zeytin-yeşili*/
+			--color4: #ebebeb;
+			/*açık gri*/
+			--color5: #fff;
+		}
+
+		/* Colors END */
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html {
+			font-size: 62.5%;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "Gotham";
+			font-size: 1.6rem;
+			background-color: var(--color1);
+			color: var(--color1);
+			overflow: hidden;
+		}
+
+		section {
+			width: 45rem;
+			height: 51rem;
+			padding: 1.5rem;
+			background-color: var(--color5);
+			margin: 10rem auto;
+			border-radius: 10px;
+			font-size: 2rem;
+			overflow: hidden;
+			box-shadow: rgb(109, 104, 100) 0px 20px 30px -10px;
+		}
+
+		.forms {
+			position: relative;
+		}
+
+		#signform {
+			position: absolute;
+			transition: all 0.5s ease;
+			margin-left: 5rem;
+		}
+
+		#signform2 {
+			position: absolute;
+			transition: all 0.5s ease;
+			margin-left: 5rem;
+		}
+
+		.form {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: var(--color1);
+			min-width: 32rem;
+		}
+
+		.sign {
+			display: flex;
+			column-gap: 2rem;
+			margin: 1rem 0;
+			font-size: 1.6rem;
+			font-weight: bold;
+		}
+
+		.sign label {
+			cursor: pointer;
+		}
+
+		.input {
+			display: flex;
+			justify-content: center;
+			padding: 1rem;
+		}
+
+		.input input {
+			padding: 1.5rem 2rem;
+			width: 30rem;
+			border-radius: 5rem;
+			outline: none;
+			border: none;
+			font-family: "Gotham";
+			font-weight: 600;
+			color: var(--color1);
+			font-size: 1.6rem;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		}
+
+		.check {
+			align-items: center;
+			display: inline;
+			margin: 10px 0px;
+			margin-left: 3rem;
+			accent-color: var(--color2);
+		}
+
+		input[type="checkbox"] {
+			cursor: pointer;
+		}
+
+		.check label {
+			font-size: 1.6rem;
+		}
+
+		.button {
+			display: flex;
+			justify-content: center;
+			padding: 5px;
+			margin: 1rem 0;
+		}
+
+		.warning p {
+			text-align: center;
+			font-size: 1.4rem;
+			color: var(--color2);
+			font-weight: 500;
+		}
+
+		.button button {
+			padding: 1.5rem 2rem;
+			width: 30rem;
+			font-size: 1.6rem;
+			border-radius: 5rem;
+			outline: none;
+			border: none;
+			font-weight: bold;
+			font-family: "Gotham";
+			cursor: pointer;
+			color: var(--color5);
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			background-color: var(--color2);
+		}
+
+		.forgot {
+			display: flex;
+			justify-content: center;
+			margin: 25px 0px;
+		}
+
+		.forgot a {
+			color: var(--color1) 1;
+			text-decoration: none;
+			opacity: 0.5;
+			font-weight: 500;
+		}
+
+		.forgot a:hover {
+			color: rgb(0, 0, 0);
+			opacity: 1;
+		}
+
+		#SignIn:checked~section #signform2,
+		#SignUp:checked~section #signform {
+			transform: translatex(150%);
+		}
+
+		#SignIn:checked~section .sign label:first-child,
+		#SignUp:checked~section .sign label:last-child {
+			margin-bottom: -2px;
+			border-bottom: 2px solid var(--color2);
+		}
+
+		.form-logo {
+			justify-content: center;
+			align-items: center;
+			display: flex;
+		}
+
+		.logo {
+			width: 10rem;
+			align-items: center;
+			margin: 0.5rem 0;
+		}
+
+		@media screen and (max-width: 600px) {
+			section {
+				width: 35rem;
+				font-size: 1.4rem;
+				padding: 1rem;
+				height: 45rem;
+			}
+
+			#signform {
+				width: 23rem;
+			}
+
+			#signform2 {
+				width: 23rem;
+			}
+
+			.input input {
+				padding: 1rem 1.5rem;
+			}
+		}
 	</style>
 </head>
+
 <body>
 	<input type="radio" name="optionScreen" id="SignIn" hidden checked />
-    <input type="radio" name="optionScreen" id="SignUp" hidden />
+	<input type="radio" name="optionScreen" id="SignUp" hidden />
 
 	<section>
 		<div class="form">
 			<div class="form-logo">
-			  <div class="logo">
-				<img class="logo" src="naperva-logo-round.png" alt="" />
-			  </div>
+				<div class="logo">
+					<img class="logo" src="naperva-logo-round.png" alt="" />
+				</div>
 			</div>
 			<div class="sign">
-			  <label for="SignIn">GİRİŞ YAP</label>
-			  <label for="SignUp">KAYIT OL</label>
+				<label for="SignIn">GİRİŞ YAP</label>
+				<label for="SignUp">KAYIT OL</label>
 			</div>
-		  </div>
-		  <div class="forms">
+		</div>
+		<div class="forms">
 			<form id="signform">
 				<div class="input">
-				  <input
-					type="text"
-					name=""
-					id="username"
-					placeholder="Kullanıcı Adı"
-				  />
+					<input type="text" name="" id="username" placeholder="Kullanıcı Adı" />
 				</div>
 				<div class="input">
-				  <input type="password" name="" id="password" placeholder="Şifre" />
+					<input type="password" name="" id="password" placeholder="Şifre" />
 				</div>
 				<div class="check">
-				  <input type="checkbox" name="" id="" checked /><label for=""
-					>Beni Hatırla</label
-				  >
+					<input type="checkbox" name="" id="" checked /><label for="">Beni Hatırla</label>
 				</div>
 				<div class="button">
-				  <button id="login">GİRİŞ YAP</button>
+					<button id="login">GİRİŞ YAP</button>
 				</div>
 				<div id="warning"></div>
 				<div class="forgot">
-				  <a href="#">Şifreni Mi Unuttun?</a>
+					<a href="#">Şifreni Mi Unuttun?</a>
 				</div>
-			  </form>
+			</form>
 
-			  <form action="" id="signform2">
+			<form action="" id="signform2">
 				<div class="input">
-				  <input type="text" name="" id="" placeholder="Adınız" />
+					<input type="text" name="" id="" placeholder="Adınız" />
 				</div>
 				<div class="input">
-				  <input type="text" name="" id="" placeholder="Email" />
+					<input type="text" name="" id="" placeholder="Email" />
 				</div>
 				<div class="input">
-				  <input type="text" name="" id="" placeholder="Şifre" />
+					<input type="text" name="" id="" placeholder="Şifre" />
 				</div>
-	  
+
 				<div class="button">
-				  <button>KAYIT OL</button>
+					<button>KAYIT OL</button>
 				</div>
-			  </form>
-		  </div>
+			</form>
+		</div>
 	</section>
 	<script src="script.js"></script>
 </body>
+
 </html>
