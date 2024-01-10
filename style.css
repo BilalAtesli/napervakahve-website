@@ -1,5 +1,15 @@
 /* Font Family */
 @import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Roboto:wght@400;500;700&display=swap");
+
+@font-face {
+	font-family: "Gotham";
+	src: url("GothamRoundedLight_21020.ttf") format("woff2"),
+	  url("GothamRoundedMedium_21022.ttf") format("woff"),
+	  url("GothamRoundedBold_21016.ttf") format("woff");
+	font-weight: normal;
+	font-style: normal;
+  }
+  
 * {
   box-sizing: border-box;
 }
@@ -306,6 +316,144 @@ footer {
   .avatar h3 {
 	margin: 0.2rem 0rem;
   }
+
+  /* ! Login */
+.form-logo {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+  }
+  .logo {
+	width: 10rem;
+	align-items: center;
+	margin: 0.5rem 0;
+  }
+  section {
+	width: 45rem;
+	height: 51rem;
+	padding: 1.5rem;
+	background-color: var(--color5);
+	margin: 10rem auto;
+	border-radius: 10px;
+	font-size: 2rem;
+	overflow: hidden;
+	box-shadow: rgb(109, 104, 100) 0px 20px 30px -10px;
+  }
+  .forms {
+	position: relative;
+  }
+  #signform {
+	position: absolute;
+	transition: all 0.5s ease;
+	margin-left: 5rem;
+  }
+  #signform2 {
+	position: absolute;
+	transition: all 0.5s ease;
+	margin-left: 5rem;
+  }
+  .form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: var(--color1);
+	min-width: 32rem;
+  }
+  .sign {
+	display: flex;
+	column-gap: 2rem;
+	margin: 1rem 0;
+	font-size: 1.6rem;
+	font-weight: bold;
+  }
+  .sign label {
+	cursor: pointer;
+  }
+  .input {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+  }
+  .input input {
+	padding: 1.5rem 2rem;
+	width: 30rem;
+	border-radius: 5rem;
+	outline: none;
+	border: none;
+	font-family: "Gotham";
+	font-weight: 600;
+	color: var(--color1);
+	font-size: 1.6rem;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .check {
+	align-items: center;
+	display: inline;
+	margin: 10px 0px;
+	margin-left: 3rem;
+	accent-color: var(--color2);
+  }
+  input[type="checkbox"] {
+	cursor: pointer;
+  }
+  .check label {
+	font-size: 1.6rem;
+  }
+  .button {
+	display: flex;
+	justify-content: center;
+	padding: 5px;
+	margin: 1rem 0;
+  }
+  .warning p {
+	text-align: center;
+	font-size: 1.4rem;
+	color: var(--color2);
+	font-weight: 500;
+  }
+  .button button {
+	padding: 1.5rem 2rem;
+	width: 30rem;
+	font-size: 1.6rem;
+	border-radius: 5rem;
+	outline: none;
+	border: none;
+	font-weight: bold;
+	font-family: "Gotham";
+	cursor: pointer;
+	color: var(--color5);
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	background-color: var(--color2);
+  }
+  .forgot {
+	display: flex;
+	justify-content: center;
+	margin: 25px 0px;
+  }
+  .forgot a {
+	color: var(--color1) 1;
+	text-decoration: none;
+	opacity: 0.5;
+	font-weight: 500;
+  }
+  .forgot a:hover {
+	color: rgb(0, 0, 0);
+	opacity: 1;
+  }
+  
+  #SignIn:checked ~ section #signform2,
+  #SignUp:checked ~ section #signform {
+	transform: translatex(150%);
+  }
+  
+  #SignIn:checked ~ section .sign label:first-child,
+  #SignUp:checked ~ section .sign label:last-child {
+	margin-bottom: -2px;
+	border-bottom: 2px solid var(--color2);
+  }
+  
+  /* ! Login END */
   /* other pages end*/
 
   /*? Responsive   */
