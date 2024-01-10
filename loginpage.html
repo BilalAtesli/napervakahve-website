@@ -4,8 +4,39 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kullanıcı Girişi</title>
+	<link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Gotham";
+        font-size: 1.6rem;
+        background-color: var(--color1);
+        color: var(--color1);
+        overflow: hidden;
+      }
+      .logo:hover {
+        transform: none;
+      }
+	</style>
 </head>
 <body>
-	
+	<input type="radio" name="optionScreen" id="SignIn" hidden checked />
+    <input type="radio" name="optionScreen" id="SignUp" hidden />
+
+	<section>
+		<div class="form">
+			<div class="form-logo">
+			  <div class="logo">
+				<img class="logo" src="naperva-logo-round.png" alt="" />
+			  </div>
+			</div>
+			<div class="sign">
+			  <label for="SignIn">GİRİŞ YAP</label>
+			  <label for="SignUp">KAYIT OL</label>
+			</div>
+		  </div>
+
+	</section>
 </body>
 </html>
