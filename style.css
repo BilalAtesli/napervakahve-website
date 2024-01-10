@@ -540,5 +540,23 @@ footer {
 	  height: 6rem;
 	}
   }
+
+  @media screen and (max-width: 600px) {
+	section {
+	  width: 35rem;
+	  font-size: 1.4rem;
+	  padding: 1rem;
+	  height: 45rem;
+	}
+	#signform {
+	  width: 23rem;
+	}
+	#signform2 {
+	  width: 23rem;
+	}
+	.input input {
+	  padding: 1rem 1.5rem;
+	}
+  }
   
   /*? Responsive END  */
