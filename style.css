@@ -9,7 +9,7 @@
 	font-weight: normal;
 	font-style: normal;
   }
-  
+
 * {
   box-sizing: border-box;
 }
@@ -318,16 +318,7 @@ footer {
   }
 
   /* ! Login */
-.form-logo {
-	justify-content: center;
-	align-items: center;
-	display: flex;
-  }
-  .logo {
-	width: 10rem;
-	align-items: center;
-	margin: 0.5rem 0;
-  }
+
   section {
 	width: 45rem;
 	height: 51rem;
