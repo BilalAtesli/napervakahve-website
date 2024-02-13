@@ -18,4 +18,3 @@
 
 ![Screenshot 8](https://github.com/BilalAtesli/napervakahve-website/blob/main/screenshot8.png)
 
- https://bilalatesli.github.io/napervakahve-website/
